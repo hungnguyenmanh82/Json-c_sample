@@ -1,4 +1,4 @@
-#Licensed under the MIT license. See LICENSE file in the project root for full license information.
+﻿#Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 cmake_minimum_required(VERSION 2.8.7)
 cmake_policy(SET CMP0048 NEW)
@@ -21,8 +21,9 @@ if (NOT HAVE_STRTOLL)
 endif ()
 
 
-
+# các option biên dịch
 if(MSVC)
+#  /wd4100:  là option loại bỏ warning (báo lỗi dừng biên dịch)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /wd4100 /wd4996 /wd4244 /wd4706 /wd4702 /wd4127 /wd4701")
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /wd4100 /wd4996 /wd4244 /wd4706 /wd4702 /wd4127 /wd4701")
   set(cmake_create_config 1)
